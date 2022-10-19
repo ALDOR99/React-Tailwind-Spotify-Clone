@@ -5,7 +5,7 @@ import Content from 'components/content'
 function App() {
   return (
     <>
-      <div>
+      <div className="container">
         <Sidebar />
         <Content />
       </div>

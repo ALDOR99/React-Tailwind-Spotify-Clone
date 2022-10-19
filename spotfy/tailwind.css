@@ -6,5 +6,11 @@
     html,body, #root {
         @apply h-full
     }
+    #root{
+        @apply flex-col
+    }
+    .container{
+        height: calc(100% - theme('spacing.5'));
+    }
     
 }
