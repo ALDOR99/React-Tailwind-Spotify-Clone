@@ -638,6 +638,11 @@ html, body,  #root {
   font-weight: 600;
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .text-link {
   --tw-text-opacity: 1;
   color: rgb(179 179 179 / var(--tw-text-opacity));

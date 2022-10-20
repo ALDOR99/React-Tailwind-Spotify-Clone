@@ -1,3 +1,5 @@
+import { Icon } from '../../Icons'
+
 function Menu() {
   return (
     <nav className="px-2">
@@ -5,8 +7,11 @@ function Menu() {
         <li>
           <a
             href="#"
-            className="h-10 flex items-center text-sm font-semibold text-link rounded hover:text-white px-4 bg-active"
+            className="h-10 flex items-center text-sm font-semibold text-white rounded hover:text-white px-4 bg-active"
           >
+            <span>
+              <Icon name={'home'} />
+            </span>
             Anasayfa
           </a>
         </li>
