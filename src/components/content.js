@@ -1,9 +1,7 @@
-import { Switch, Route } from '/src/views/react-router-dom'
-import Navbar from './Navbar'
-
-import Home from '../views/Home'
-import Search from '../views/Search'
-import { Form } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+import Navbar from 'components/Navbar'
+import Home from 'views/Home'
+import Search from 'views/Search'
 
 function Content() {
   return (
