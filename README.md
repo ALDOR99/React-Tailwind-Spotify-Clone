@@ -1,3 +1,6 @@
+<img src="https://images7.alphacoders.com/109/1093980.jpg" align="top" width="1000" height="500">
+
+
 <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/source.gif" align="right" width="400" height="250">
 
 ## React-Tailwind-Spotify-Clone
