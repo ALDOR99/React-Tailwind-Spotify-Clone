@@ -61,12 +61,51 @@ const CollectionIcon = ({ size }) => {
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------
+const PlusIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M 15.25 8 a 0.75 0.75 0 0 1 -0.75 0.75 H 8.75 v 5.75 a 0.75 0.75 0 0 1 -1.5 0 V 8.75 H 1.5 a 0.75 0.75 0 0 1 0 -1.5 h 5.75 V 1.5 a 0.75 0.75 0 0 1 1.5 0 v 5.75 h 5.75 a 0.75 0.75 0 0 1 0.75 0.75 Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+//--------------------------------------------------------------------------------------------------------------------------------------
 
+const HeartIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M 15.724 4.22 A 4.313 4.313 0 0 0 12.192 0.814 a 4.269 4.269 0 0 0 -3.622 1.13 a 0.837 0.837 0 0 1 -1.14 0 a 4.272 4.272 0 0 0 -6.21 5.855 l 5.916 7.05 a 1.128 1.128 0 0 0 1.727 0 l 5.916 -7.05 a 4.228 4.228 0 0 0 0.945 -3.577 Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     home: HomeIcon,
     search: SearchIcon,
     collection: CollectionIcon,
+    plus: PlusIcon,
+    heart: HeartIcon,
   }
   const Component = icons[name]
   return <Component size={size} />
