@@ -1,3 +1,49 @@
+<img src="https://media.giphy.com/media/ZVik7pBtu9dNS/source.gif" align="right" width="400" height="250">
+
+## React-Tailwind-Spotify-Clone
+
+Check out my Spotify Cloning tutorial
+
+### I continue to improve myself by cloning the spotify application that I spend a lot of time with. 👋
+
+<font color="pink">Coffee ☕ is how I keep up with `< code />` </font>
+### **` I'm on my way to become a JavaScript,PYTHON,JAVA advanced developer `**
+
+### Tech I use
+
+
+<img align="left" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" width="50" height="50" />
+<img align="left" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" width="45"  height="45" />
+
+<br /><br />
+
+
+
+
+
+<h2 align="center">My GitHub Stats :bar_chart:</h2>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Aldor99&show_icons=true&theme=tokyonight" width="450" height="180">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Aldor99&layout=compact&theme=tokyonight" height="180">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
