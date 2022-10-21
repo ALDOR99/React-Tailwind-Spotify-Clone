@@ -97,6 +97,29 @@ const HeartIcon = ({ size }) => {
     </svg>
   )
 }
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+const downloadIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M 12 3 a 9 9 0 1 0 0 18 a 9 9 0 0 0 0 -18 Z M 1 12 C 1 5.925 5.925 1 12 1 s 11 4.925 11 11 s -4.925 11 -11 11 S 1 18.075 1 12 Z"
+        fill="currentColor"
+      />
+      <path
+        d="M 12 6.05 a 1 1 0 0 1 1 1 v 7.486 l 1.793 -1.793 a 1 1 0 1 1 1.414 1.414 L 12 18.364 l -4.207 -4.207 a 1 1 0 1 1 1.414 -1.414 L 11 14.536 V 7.05 a 1 1 0 0 1 1 -1 Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 const Icon = ({ name, size = 24 }) => {
@@ -106,6 +129,7 @@ const Icon = ({ name, size = 24 }) => {
     collection: CollectionIcon,
     plus: PlusIcon,
     heart: HeartIcon,
+    download: downloadIcon,
   }
   const Component = icons[name]
   return <Component size={size} />

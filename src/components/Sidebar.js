@@ -2,6 +2,8 @@ import logo from '../../src/components/img/logo.svg'
 import Menu from '../../src/components/Sidebar/Menu.js'
 import { Icon } from 'Icons'
 import PlayList from '../../src/components/Sidebar/PlayList.js'
+import DownloadApp from 'components/Sidebar/DownloadApp'
+//------------------------------------------------------------------------------------------------------------------------
 
 function Sidebar() {
   return (
@@ -39,6 +41,7 @@ function Sidebar() {
       </nav>
 
       <PlayList />
+      <DownloadApp />
     </aside>
   )
 }
