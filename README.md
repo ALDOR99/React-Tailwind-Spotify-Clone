@@ -1,3 +1,6 @@
+<img src="https://images7.alphacoders.com/109/1093980.jpg" align="top" width="1000" height="500">
+
+
 <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/source.gif" align="right" width="400" height="250">
 
 ## React-Tailwind-Spotify-Clone
@@ -16,24 +19,6 @@ Check out my Spotify Cloning tutorial
 <img align="left" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" width="45"  height="45" />
 
 <br /><br />
-
-
-
-
-
-<h2 align="center">My GitHub Stats :bar_chart:</h2>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Aldor99&show_icons=true&theme=tokyonight" width="450" height="180">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Aldor99&layout=compact&theme=tokyonight" height="180">
-</p>
-
-
-
-
-
-
-
-
 
 
 
