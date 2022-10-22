@@ -122,6 +122,63 @@ const downloadIcon = ({ size }) => {
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------
+
+const PrevIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+const NextIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+const DownDirIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+    >
+      <path d="M14 6l-6 6-6-6h12z" fill="currentColor" />
+    </svg>
+  )
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     home: HomeIcon,
@@ -130,6 +187,9 @@ const Icon = ({ name, size = 24 }) => {
     plus: PlusIcon,
     heart: HeartIcon,
     download: downloadIcon,
+    prev: PrevIcon,
+    next: NextIcon,
+    downDir: DownDirIcon,
   }
   const Component = icons[name]
   return <Component size={size} />
