@@ -9,7 +9,6 @@ function Section({ title, more = false }) {
         </h3>
         {more && (
           <NavLink className={'text-sm font-semibold uppercase'} to={more}>
-            {' '}
             HEPSİNİ GÖR
           </NavLink>
         )}
