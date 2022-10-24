@@ -8,19 +8,21 @@ function Content() {
   return (
     <main className="flex-auto">
       <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+      <div className="px-8 pt-5">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-        <Route path="/search">
-          <Search />
-        </Route>
+          <Route path="/search">
+            <Search />
+          </Route>
 
-        <Route path="/Collection">
-          <Collection />
-        </Route>
-      </Switch>
+          <Route path="/Collection">
+            <Collection />
+          </Route>
+        </Switch>
+      </div>
     </main>
   )
 }

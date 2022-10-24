@@ -1,4 +1,13 @@
+import Section from '../../src/components/Section'
+
 function Home() {
-  return <div>Burası ana sayfa</div>
+  return (
+    <div>
+      <Section
+        title="Dinleyicileri arasında popüler: Evrim Ağacı ile Bilime Dair Her Şey!"
+        more="/blabla"
+      />
+    </div>
+  )
 }
 export default Home
