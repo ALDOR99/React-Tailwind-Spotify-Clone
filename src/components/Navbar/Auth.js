@@ -35,12 +35,13 @@ function Auth() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  className={`h-10 flex items-center px-2 text-sm rounded ${
+                  className={`h-10 flex justify-between items-center px-2 text-sm rounded ${
                     active && 'bg-white bg-opacity-10'
                   }`}
                   href="#"
                 >
-                  Account
+                  Hesap
+                  <Icon size="16" name="external" />
                 </a>
               )}
             </Menu.Item>
@@ -52,7 +53,34 @@ function Auth() {
                   }`}
                   href="#"
                 >
-                  Profile
+                  Profil
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={`h-10 flex justify-between items-center px-2 text-sm rounded ${
+                    active && 'bg-white bg-opacity-10'
+                  }`}
+                  href="#"
+                >
+                  Destek
+                  <Icon size="16" name="external" />
+                </a>
+              )}
+            </Menu.Item>
+
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={`h-10 flex justify-between items-center px-2 text-sm rounded ${
+                    active && 'bg-white bg-opacity-10'
+                  }`}
+                  href="#"
+                >
+                  İndir
+                  <Icon size="16" name="external" />
                 </a>
               )}
             </Menu.Item>
@@ -64,7 +92,19 @@ function Auth() {
                   }`}
                   href="#"
                 >
-                  Log out
+                  Ayarlar
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={`h-10 flex items-center px-2 text-sm rounded ${
+                    active && 'bg-white bg-opacity-10'
+                  }`}
+                  href="#"
+                >
+                  Oturumu kapat
                 </a>
               )}
             </Menu.Item>

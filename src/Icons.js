@@ -177,7 +177,28 @@ const DownDirIcon = ({ size }) => {
     </svg>
   )
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------
+const ExternalIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M 1 2.75 A 0.75 0.75 0 0 1 1.75 2 H 7 v 1.5 H 2.5 v 11 h 10.219 V 9 h 1.5 v 6.25 a 0.75 0.75 0 0 1 -0.75 0.75 H 1.75 a 0.75 0.75 0 0 1 -0.75 -0.75 V 2.75 Z"
+        fill="currentColor"
+      />
+      <path
+        d="M 15 1 v 4.993 a 0.75 0.75 0 1 1 -1.5 0 V 3.56 L 8.78 8.28 a 0.75 0.75 0 0 1 -1.06 -1.06 l 4.72 -4.72 h -2.433 a 0.75 0.75 0 0 1 0 -1.5 H 15 Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
 //--------------------------------------------------------------------------------------------------------------------------------------
 const Icon = ({ name, size = 24 }) => {
   const icons = {
@@ -190,6 +211,7 @@ const Icon = ({ name, size = 24 }) => {
     prev: PrevIcon,
     next: NextIcon,
     downDir: DownDirIcon,
+    external: ExternalIcon,
   }
   const Component = icons[name]
   return <Component size={size} />
