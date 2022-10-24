@@ -9,7 +9,7 @@ function Auth() {
   }
   return (
     <Menu as="nav" className={'relative'}>
-      {({ open: boolean }) => (
+      {({ open }) => (
         <>
           <Menu.Button
             className={`flex items-center h-8 rounded-3xl pr-2 ${
@@ -20,22 +20,51 @@ function Auth() {
               src={user.avatar}
               className={'w-8 h-8 rounded-full p-0.5 mr-2'}
             />
+
             <span className="text-sm font-semibold mr-2">{user.name}</span>
 
-            <Icon size={16} name="downDir" />
+            <span className={open && 'rotate-180'}>
+              <Icon size={16} name="downDir" />
+            </span>
           </Menu.Button>
           <Menu.Items
             className={
-              'absolute top-full right-0 w-48 bg-active rounded translate-y-2'
+              'absolute top-full p-1 right-0 w-48 bg-active rounded translate-y-2'
             }
           >
             <Menu.Item>
               {({ active }) => (
                 <a
-                  className={`${active && 'bg-blue-500'}`}
-                  href="/account-settings"
+                  className={`h-10 flex items-center px-2 text-sm rounded ${
+                    active && 'bg-white bg-opacity-10'
+                  }`}
+                  href="#"
                 >
-                  Account settings
+                  Account
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={`h-10 flex items-center px-2 text-sm rounded ${
+                    active && 'bg-white bg-opacity-10'
+                  }`}
+                  href="#"
+                >
+                  Profile
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={`h-10 flex items-center px-2 text-sm rounded ${
+                    active && 'bg-white bg-opacity-10'
+                  }`}
+                  href="#"
+                >
+                  Log out
                 </a>
               )}
             </Menu.Item>
