@@ -19,13 +19,16 @@ function Section({ title, more = false, items }) {
         )}
       </header>
 
-      <div className="grid grid-cols-4 gap-x-6">
+      <div className="grid grid-cols-7 gap-x-6">
         {items.map((item) => (
           <NavLink className={'bg-footer p-4 rounded'} key={item.id} to="/">
-            <div>
-              <img src={item.image} className="aspect-h-1 aspect-w-1 " />
+            <div className="pt-[100%] relative">
+              <img
+                src={item.image}
+                className="absolute top-0 inset-0 object-cover w-full h-full"
+              />
             </div>
-            {item.title}
+            <h6 className="line-clamp-1">{item.title}</h6>
           </NavLink>
         ))}
       </div>

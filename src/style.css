@@ -568,32 +568,23 @@ html, body,  #root {
   --tw-backdrop-sepia:  ;
 }
 
-.aspect-h-1 {
-  --tw-aspect-h: 1;
-}
-
-.aspect-w-1 {
-  position: relative;
-  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
-  --tw-aspect-w: 1;
-}
-
-.aspect-w-1 > * {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-full {
@@ -649,6 +640,10 @@ html, body,  #root {
   height: 3.75rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -701,8 +696,8 @@ html, body,  #root {
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -814,6 +809,10 @@ html, body,  #root {
   --tw-gradient-to: #93c5fd;
 }
 
+.object-cover {
+  object-fit: cover;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -857,6 +856,10 @@ html, body,  #root {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pt-\[100\%\] {
+  padding-top: 100%;
 }
 
 .pt-6 {
@@ -915,6 +918,13 @@ html, body,  #root {
 
 .opacity-70 {
   opacity: 0.7;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .hover\:bg-active:hover {
