@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import {Home} from 'views/Home.js'
+import { Home } from 'views/Home.js'
 
 function Section({ title, more = false, items }) {
   return (
@@ -20,16 +20,18 @@ function Section({ title, more = false, items }) {
         )}
       </header>
 
-
-      <div className="grid grid-cols-4">{items.map((item=>(
+      <div className="grid grid-cols-4"> { items.map((item=>(
 
         <NavLink key={item.id} to="/" >
           {item.title}
         </NavLink>
 
-      ))},</div>
+      ))}
 
-      </section>
+      </div>
+    
+    </section>
   )
 }
+
 export default Section
