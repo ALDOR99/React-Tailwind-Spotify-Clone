@@ -20,18 +20,14 @@ function Section({ title, more = false, items }) {
         )}
       </header>
 
-      <div className="grid grid-cols-4"> { items.map((item=>(
-
-        <NavLink key={item.id} to="/" >
-          {item.title}
-        </NavLink>
-
-      ))}
-
+      <div className="grid grid-cols-4">
+        {items.map((item) => (
+          <NavLink key={item.id} to="/">
+            {item.title}
+          </NavLink>
+        ))}
       </div>
-    
     </section>
   )
 }
-
 export default Section
