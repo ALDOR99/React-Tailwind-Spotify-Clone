@@ -47,7 +47,7 @@ function Home() {
   ]
   return (
     <div>
-      <Section title="Kaldığın yerden devam e!" more="/blabla" items={items} />
+      <Section title="Kaldığın yerden devam et" more="/blabla" items={items} />
     </div>
   )
 }
