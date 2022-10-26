@@ -568,6 +568,26 @@ html, body,  #root {
   --tw-backdrop-sepia:  ;
 }
 
+.aspect-h-1 {
+  --tw-aspect-h: 1;
+}
+
+.aspect-w-1 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 1;
+}
+
+.aspect-w-1 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .absolute {
   position: absolute;
 }
@@ -589,6 +609,10 @@ html, body,  #root {
   margin-right: 1.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -607,10 +631,6 @@ html, body,  #root {
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .flex {
@@ -639,6 +659,10 @@ html, body,  #root {
 
 .h-8 {
   height: 2rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-60 {
@@ -681,10 +705,6 @@ html, body,  #root {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -701,6 +721,11 @@ html, body,  #root {
   justify-content: space-between;
 }
 
+.gap-x-6 {
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
 .gap-x-4 {
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
@@ -708,6 +733,10 @@ html, body,  #root {
 
 .overflow-auto {
   overflow: auto;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-sm {
@@ -720,10 +749,6 @@ html, body,  #root {
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .border-t {
@@ -789,6 +814,10 @@ html, body,  #root {
   --tw-gradient-to: #93c5fd;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-0\.5 {
   padding: 0.125rem;
 }
@@ -843,6 +872,11 @@ html, body,  #root {
   line-height: 2rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -850,11 +884,6 @@ html, body,  #root {
 
 .text-s {
   font-size: 0.813rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .font-semibold {

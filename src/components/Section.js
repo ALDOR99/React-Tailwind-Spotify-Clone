@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import { Home } from 'views/Home.js'
 
 function Section({ title, more = false, items }) {
   return (
@@ -20,9 +19,12 @@ function Section({ title, more = false, items }) {
         )}
       </header>
 
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 gap-x-6">
         {items.map((item) => (
-          <NavLink key={item.id} to="/">
+          <NavLink className={'bg-footer p-4 rounded'} key={item.id} to="/">
+            <div>
+              <img src={item.image} className="aspect-h-1 aspect-w-1 " />
+            </div>
             {item.title}
           </NavLink>
         ))}
