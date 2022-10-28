@@ -644,6 +644,10 @@ html, body,  #root {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -772,6 +776,10 @@ html, body,  #root {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-t {
@@ -986,10 +994,26 @@ html, body,  #root {
   text-decoration-line: underline;
 }
 
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+.group:hover .group-hover\:flex {
+  display: flex;
+}
+
 .group:hover .group-hover\:bg-opacity-100 {
   --tw-bg-opacity: 1;
 }
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+
+.group:focus .group-focus\:block {
+  display: block;
+}
+
+.group:focus .group-focus\:flex {
+  display: flex;
 }
