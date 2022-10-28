@@ -35,6 +35,7 @@ function Section({ title, more = false, items }) {
             <h6 className="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">
               {item.title}
             </h6>
+            <p className="line-clamp-2 text-link text-xm">{item.description}</p>
           </NavLink>
         ))}
       </div>
