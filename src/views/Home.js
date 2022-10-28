@@ -55,6 +55,8 @@ function Home() {
   return (
     <div>
       <Section title="Kaldığın yerden devam et" more="/blabla" items={items} />
+      <Section title="Beğendiklerin ve dahası" more="/blabla" items={items} />
+      <Section title="Klasik müziğin devrimi" more="/blabla" items={items} />
     </div>
   )
 }

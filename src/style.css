@@ -782,6 +782,10 @@ html, body,  #root {
   border-radius: 0.5rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -945,6 +949,14 @@ html, body,  #root {
 
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-white {
