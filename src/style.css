@@ -595,6 +595,14 @@ html, body,  #root {
   right: 0px;
 }
 
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -622,6 +630,10 @@ html, body,  #root {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .flex {
@@ -674,6 +686,10 @@ html, body,  #root {
 
 .w-48 {
   width: 12rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .flex-auto {
@@ -793,6 +809,11 @@ html, body,  #root {
 .bg-active {
   --tw-bg-opacity: 1;
   background-color: rgb(40 40 40 / var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 185 84 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-60 {
