@@ -21,14 +21,20 @@ function Section({ title, more = false, items }) {
 
       <div className="grid grid-cols-7 gap-x-6">
         {items.map((item) => (
-          <NavLink className={'bg-footer p-4 rounded'} key={item.id} to="/">
-            <div className="pt-[100%] relative">
+          <NavLink
+            className={'bg-footer p-4 rounded hover:bg-active'}
+            key={item.id}
+            to="/"
+          >
+            <div className="pt-[100%] relative mb-4">
               <img
                 src={item.image}
                 className="absolute top-0 inset-0 object-cover w-full h-full"
               />
             </div>
-            <h6 className="line-clamp-1">{item.title}</h6>
+            <h6 className="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">
+              {item.title}
+            </h6>
           </NavLink>
         ))}
       </div>
