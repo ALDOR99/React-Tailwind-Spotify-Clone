@@ -53,10 +53,11 @@ function Home() {
     },
   ]
   return (
-    <div>
+    <div className="grid gap-y-8">
       <Section title="Kaldığın yerden devam et" more="/blabla" items={items} />
       <Section title="Beğendiklerin ve dahası" more="/blabla" items={items} />
       <Section title="Klasik müziğin devrimi" more="/blabla" items={items} />
+      <Section title="Epic müzik" more="/blabla" items={items} />
     </div>
   )
 }
