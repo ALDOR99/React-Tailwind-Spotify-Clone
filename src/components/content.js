@@ -7,6 +7,8 @@ import Collection from 'views/Collection'
 function Content() {
   return (
     <main className="flex-auto overflow-auto">
+      {' '}
+      {/*Burda kaldım */}
       <Navbar />
       <div className="px-8 py-5">
         <Switch>
