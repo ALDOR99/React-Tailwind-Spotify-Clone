@@ -355,7 +355,7 @@ const DeviceIcon = ({ size }) => {
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 
-const FullScrenIcon = ({ size }) => {
+const FullScreenIcon = ({ size }) => {
   return (
     <svg
       role="img"
@@ -490,6 +490,18 @@ const Icon = ({ name, size = 24 }) => {
     downDir: DownDirIcon,
     external: ExternalIcon,
     play: PlayIcon,
+    pause: PlayerPauseIcon,
+    playerPrever: PlayerPrevIcon,
+    playerNext: PlayerNextIcon,
+    repeat: RepeatIcon,
+    shuffel: ShuffleIcon,
+    queue: QueueIcon,
+    fullSreen: FullScreenIcon,
+    device: DeviceIcon,
+    volumeMuted: VolumeMuteIcon,
+    volumeLow: VolumeLowIcon,
+    volumeNormal: VolumeNormalIcon,
+    volumeFull: VolumeFullIcon,
   }
   const Component = icons[name]
   return <Component size={size} />
