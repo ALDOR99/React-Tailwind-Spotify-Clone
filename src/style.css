@@ -696,6 +696,14 @@ html, body,  #root {
   width: 12rem;
 }
 
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.min-w-\[11\.25rem\] {
+  min-width: 11.25rem;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -728,6 +736,10 @@ html, body,  #root {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -748,6 +760,11 @@ html, body,  #root {
 .gap-x-4 {
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
+}
+
+.gap-x-2 {
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
 }
 
 .overflow-auto {
@@ -971,6 +988,10 @@ html, body,  #root {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-opacity-70 {
+  --tw-text-opacity: 0.7;
+}
+
 .opacity-70 {
   opacity: 0.7;
 }
@@ -990,6 +1011,10 @@ html, body,  #root {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-opacity-100:hover {
+  --tw-text-opacity: 1;
 }
 
 .hover\:underline:hover {

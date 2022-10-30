@@ -475,7 +475,24 @@ const VolumeFullIcon = ({ size }) => {
     </svg>
   )
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------
+const LryicsIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M 13.426 2.574 a 2.831 2.831 0 0 0 -4.797 1.55 l 3.247 3.247 a 2.831 2.831 0 0 0 1.55 -4.797 Z M 10.5 8.118 l -2.619 -2.62 A 63303.1 63303.1 0 0 0 4.74 9.075 L 2.065 12.12 a 1.287 1.287 0 0 0 1.816 1.816 l 3.06 -2.688 l 3.56 -3.129 Z M 7.12 4.094 a 4.331 4.331 0 1 1 4.786 4.786 l -3.974 3.493 l -3.06 2.689 a 2.787 2.787 0 0 1 -3.933 -3.933 l 2.676 -3.045 l 3.505 -3.99 Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
 //--------------------------------------------------------------------------------------------------------------------------------------
 const Icon = ({ name, size = 24 }) => {
   const icons = {
@@ -491,7 +508,7 @@ const Icon = ({ name, size = 24 }) => {
     external: ExternalIcon,
     play: PlayIcon,
     pause: PlayerPauseIcon,
-    playerPrever: PlayerPrevIcon,
+    playerPrev: PlayerPrevIcon,
     playerNext: PlayerNextIcon,
     repeat: RepeatIcon,
     shuffel: ShuffleIcon,
@@ -502,6 +519,7 @@ const Icon = ({ name, size = 24 }) => {
     volumeLow: VolumeLowIcon,
     volumeNormal: VolumeNormalIcon,
     volumeFull: VolumeFullIcon,
+    lryics: LryicsIcon,
   }
   const Component = icons[name]
   return <Component size={size} />
