@@ -720,12 +720,20 @@ html, body,  #root {
   width: 12rem;
 }
 
+.w-\[5\.813rem\] {
+  width: 5.813rem;
+}
+
 .min-w-\[11\.25rem\] {
   min-width: 11.25rem;
 }
 
 .max-w-\[45\.125rem\] {
   max-width: 45.125rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-auto {
