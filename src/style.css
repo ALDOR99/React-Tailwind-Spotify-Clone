@@ -1028,6 +1028,10 @@ html, body,  #root {
   opacity: 0.7;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
