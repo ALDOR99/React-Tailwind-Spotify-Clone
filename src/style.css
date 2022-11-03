@@ -716,12 +716,12 @@ html, body,  #root {
   width: 2rem;
 }
 
-.w-48 {
-  width: 12rem;
-}
-
 .w-\[5\.813rem\] {
   width: 5.813rem;
+}
+
+.w-48 {
+  width: 12rem;
 }
 
 .min-w-\[11\.25rem\] {
