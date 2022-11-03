@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface CounterState {
   value: number;
@@ -9,29 +8,24 @@ const initialState: CounterState = {
   current: false,
   controls: false,
   playing: false,
-}+
+}
 
 export const playerSlice = createSlice({
   name: 'player',
   initialState,
   reducers: {
-    setCurrent:(state,action) => {
+    setCurrent: (state, action) => {
       state.current = action.payload
     },
-    setControls:(state,action) => {
+    setControls: (state, action) => {
       state.controls = action.payload
-    },  
-    setPlaying:(state,action) => {
+    },
+    setPlaying: (state, action) => {
       state.playing = action.payload
-    },       
-
+    },
   },
 })
 
-export const {
-  setCurrent,
-  setControls,
-  setPlaying
-} = playerSlice.actions
+export const { setCurrent, setControls, setPlaying } = playerSlice.actions
 
 export default playerSlice.reducer
