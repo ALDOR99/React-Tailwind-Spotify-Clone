@@ -612,10 +612,6 @@ html, body,  #root {
   margin-bottom: 1rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -626,6 +622,14 @@ html, body,  #root {
 
 .mr-4 {
   margin-right: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .mr-2 {
@@ -668,16 +672,20 @@ html, body,  #root {
   height: 3.75rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-10 {
   height: 2.5rem;
 }
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-8 {
@@ -692,10 +700,6 @@ html, body,  #root {
   width: 0.75rem;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
 .w-60 {
   width: 15rem;
 }
@@ -704,16 +708,24 @@ html, body,  #root {
   width: 1.5rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-\[30\%\] {
   width: 30%;
 }
 
-.w-\[40\%\] {
-  width: 40%;
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-8 {
   width: 2rem;
+}
+
+.w-\[40\%\] {
+  width: 40%;
 }
 
 .w-\[5\.813rem\] {
@@ -827,16 +839,16 @@ html, body,  #root {
   border-radius: 9999px;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
 .rounded {
   border-radius: 0.25rem;
-}
-
-.rounded-sm {
-  border-radius: 0.125rem;
 }
 
 .rounded-3xl {
@@ -870,14 +882,14 @@ html, body,  #root {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 185 84 / var(--tw-bg-opacity));
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 185 84 / var(--tw-bg-opacity));
 }
 
 .bg-active {
@@ -961,12 +973,12 @@ html, body,  #root {
   padding-right: 0.5rem;
 }
 
-.pt-\[100\%\] {
-  padding-top: 100%;
-}
-
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-\[100\%\] {
+  padding-top: 100%;
 }
 
 .pr-2 {
@@ -983,14 +995,18 @@ html, body,  #root {
   line-height: 1rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.text-\[0\2c 688rem\] {
+  font-size: 0,688rem;
 }
 
 .text-\[0\.688rem\] {
@@ -1049,6 +1065,13 @@ html, body,  #root {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .hover\:scale-\[1\.06\]:hover {
