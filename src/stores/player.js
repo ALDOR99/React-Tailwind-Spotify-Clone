@@ -8,6 +8,7 @@ const initialState: CounterState = {
   current: false,
   controls: false,
   playing: false,
+  sidebar: false,
 }
 
 export const playerSlice = createSlice({
@@ -23,9 +24,17 @@ export const playerSlice = createSlice({
     setPlaying: (state, action) => {
       state.playing = action.payload
     },
+    setSidebar: (state, action) => {
+      state.sidebar = action.payload
+    },
   },
 })
 
-export const { setCurrent, setControls, setPlaying } = playerSlice.actions
+export const {
+  setCurrent,
+  setControls,
+  setPlaying,
+  setSidebar,
+} = playerSlice.actions
 
 export default playerSlice.reducer

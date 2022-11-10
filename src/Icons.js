@@ -503,6 +503,26 @@ const LryicsIcon = ({ size }) => {
   )
 }
 //--------------------------------------------------------------------------------------------------------------------------------------
+
+const ArrowLeftIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      class="Svg-ytk21e-0 jAKAlG home-icon"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M 0.47 11.03 a 0.75 0.75 0 0 0 1.06 0 L 8 4.56 l 6.47 6.47 a 0.75 0.75 0 1 0 1.06 -1.06 L 8 2.44 L 0.47 9.97 a 0.75 0.75 0 0 0 0 1.06 Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     home: HomeIcon,
@@ -529,6 +549,7 @@ const Icon = ({ name, size = 24 }) => {
     volumeNormal: VolumeNormalIcon,
     volumeFull: VolumeFullIcon,
     lryics: LryicsIcon,
+    arrowLeft: ArrowLeftIcon,
   }
   const Component = icons[name]
   return <Component size={size} />
