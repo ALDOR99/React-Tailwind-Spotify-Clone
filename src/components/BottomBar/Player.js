@@ -35,8 +35,15 @@ function Player() {
       <div className="min-w-[11.25rem] w-[30%] flex items-center">
         {current && (
           <div className="flex items-center">
-            <div className="w-14 h-14">
+            <div className="w-14 h-14 mr-3">
               <img src={current.image} />
+            </div>
+
+            <div>
+              <h6 className="text-sm line-clamp-1">{current.title}</h6>
+              <p className="text-[0.688rem] text-white text-opacity-70">
+                {current.artist}
+              </p>
             </div>
           </div>
         )}
@@ -127,5 +134,4 @@ function Player() {
     </div>
   )
 }
-
 export default Player

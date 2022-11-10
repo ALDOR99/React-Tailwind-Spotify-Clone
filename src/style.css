@@ -628,16 +628,16 @@ html, body,  #root {
   margin-top: 0.25rem;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .flex {
@@ -720,12 +720,12 @@ html, body,  #root {
   width: 3.5rem;
 }
 
-.w-8 {
-  width: 2rem;
-}
-
 .w-\[40\%\] {
   width: 40%;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-\[5\.813rem\] {
@@ -1003,10 +1003,6 @@ html, body,  #root {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-\[0\2c 688rem\] {
-  font-size: 0,688rem;
 }
 
 .text-\[0\.688rem\] {
