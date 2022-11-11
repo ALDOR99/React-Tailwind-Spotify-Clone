@@ -8,7 +8,7 @@ import SidebarCover from './Sidebar/SidebarCover'
 //------------------------------------------------------------------------------------------------------------------------
 
 function Sidebar() {
-  const Sidebar = useSelector((state) => state.player.Sidebar)
+  const sidebar = useSelector((state) => state.player.sidebar)
   return (
     <aside className="w-60 pt-6 flex flex-shrink-0 flex-col bg-black">
       <a href="#" className="mb-5 px-6">
@@ -45,7 +45,7 @@ function Sidebar() {
 
       <PlayList />
       <DownloadApp />
-      {Sidebar && <SidebarCover />}
+      {sidebar && <SidebarCover />}
     </aside>
   )
 }
