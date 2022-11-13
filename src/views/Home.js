@@ -16,8 +16,8 @@ function Home() {
       title: 'Aldor',
       artist: 'alis',
       description: 'Ağu 2021',
-      image: 'https://i.scdn.co/image/ab67706c0000da84259c7bc5de0337fdafe64540',
-      type: 'album',
+      image: 'https://i.scdn.co/image/ab6761610000f178cdd4655a5c58fb1097098173',
+      type: 'artist',
       src: 'https://freesound.org/data/previews/612/612095_5674468-lq.mp3',
     },
     {
