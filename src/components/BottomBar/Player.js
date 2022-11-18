@@ -69,7 +69,7 @@ function Player() {
         )}
       </div>
 
-      <div className="max-w-[45.125rem] w-[40%] flex flex-col px-4 items-center">
+      <div className="max-w-[45.125rem] w-[40%] pt-2 flex flex-col px-4 items-center">
         <div className="flex items-center gap-x-2">
           <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="shuffel" />
@@ -94,7 +94,7 @@ function Player() {
             <Icon size={16} name="repeat" />
           </button>
         </div>
-        <div className="w-full flex items-center gap-x-2">
+        <div className="w-full flex items-center mt-1.5 gap-x-2">
           {audio}
 
           <div className="text-[0.688rem] text-white text-opacity-70">
