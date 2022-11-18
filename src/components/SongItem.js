@@ -7,7 +7,7 @@ import { setCurrent } from "../../src/stores/player";
 function SongItem({ item }) {
   const dispatch = useDispatch();
 
-  const { current, playing } = useSelector((state) => state.player);
+  const { current, playing, controls } = useSelector((state) => state.player);
 
   const imageStyle = (item) => {
     switch (item.type) {
@@ -23,7 +23,15 @@ function SongItem({ item }) {
   const isCurrentItem = current?.id === item.id && playing;
 
   const updateCurrent = () => {
-    dispatch(setCurrent(item));
+    if (current.id === item.id) {
+      if (playing) {
+        controls.pause();
+      } else {
+        controls.play();
+      }
+    } else {
+      dispatch(setCurrent(item));
+    }
   };
 
   return (
@@ -43,7 +51,7 @@ function SongItem({ item }) {
         <button
           onClick={updateCurrent}
           className={`w-10 h-10 rounded-full bg-primary absolute group-hover:flex group-focus:flex bottom-2 right-2 items-center justify-center ${
-            !isCurrentItem ? "" : "hidden"
+            !isCurrentItem ? "hidden" : "flex"
           }`}
         >
           <Icon
