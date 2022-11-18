@@ -1,7 +1,7 @@
-import Sidebar from 'components/Sidebar'
-import BottomBar from 'components/BottomBar'
-import Content from 'components/content'
-import { BrowserRouter as Router } from 'react-router-dom'
+import Sidebar from "components/Sidebar";
+import BottomBar from "components/BottomBar";
+import Content from "components/content";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       </div>
       <BottomBar />
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

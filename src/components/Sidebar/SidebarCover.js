@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { setSidebar } from 'stores/player'
-import { Icon } from 'Icons'
+import { useDispatch, useSelector } from "react-redux";
+import { setSidebar } from "stores/player";
+import { Icon } from "Icons";
 
 //-------------------------------------------------------------------------------------------------------------------------
 
 function SidebarCover() {
-  const dispatch = useDispatch()
-  const current = useSelector((state) => state.player.current)
+  const dispatch = useDispatch();
+  const current = useSelector((state) => state.player.current);
   return (
     <div className="pt-[100%] relative bg-black group">
       <img
@@ -20,7 +20,9 @@ function SidebarCover() {
         <Icon size={16} name="arrowLeft" />
       </button>
     </div>
-  )
+  );
 }
 
-export default SidebarCover
+//-------------------------------------------------------------------------------------------------------------------------
+
+export default SidebarCover;

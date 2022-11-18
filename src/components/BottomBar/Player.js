@@ -1,34 +1,38 @@
-import { Icon } from 'Icons'
-import { useAudio } from 'react-use'
-import { SecondsToTime } from 'utlies'
-import CustomRange from 'components/CustomRange'
-import { useMemo } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import { setControls, setSidebar } from 'stores/player'
+import { Icon } from "Icons";
+import { useAudio } from "react-use";
+import { SecondsToTime } from "utlies";
+import CustomRange from "components/CustomRange";
+import { useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { setControls, setPlaying, setSidebar } from "stores/player";
 
 function Player() {
-  const dispatch = useDispatch()
-  const { current, sidebar } = useSelector((state) => state.player)
+  const dispatch = useDispatch();
+  const { current, sidebar } = useSelector((state) => state.player);
 
   const [audio, state, controls, ref] = useAudio({
     src: current?.src,
-  })
+  });
 
   useEffect(() => {
-    controls.play()
-  }, [current])
+    controls.play();
+  }, [current]);
 
   useEffect(() => {
-    dispatch(setControls(controls))
-  }, [])
+    dispatch(setPlaying(state.playing));
+  }, [state.playing]);
+
+  useEffect(() => {
+    dispatch(setControls(controls));
+  }, []);
 
   const volumeIcon = useMemo(() => {
-    if (state.volume === 0 || state.muted) return 'volumeMuted'
-    if (state.volume > 0 && state.volume < 0.33) return 'volumeLow'
-    if (state.volume >= 0.33 && state.volume < 0.66) return 'volumeNormal'
-    return 'volumeFull'
-  }, [state.volume, state.muted])
+    if (state.volume === 0 || state.muted) return "volumeMuted";
+    if (state.volume > 0 && state.volume < 0.33) return "volumeLow";
+    if (state.volume >= 0.33 && state.volume < 0.66) return "volumeNormal";
+    return "volumeFull";
+  }, [state.volume, state.muted]);
 
   return (
     <div className="flex px-4 justify-between items-center h-full">
@@ -76,10 +80,10 @@ function Player() {
           </button>
 
           <button
-            onClick={controls[state?.playing ? 'pause' : 'play']}
+            onClick={controls[state?.playing ? "pause" : "play"]}
             className="w-8 h-8 bg-white flex items-center justify-center text-black rounded-full hover:scale-[1.06]"
           >
-            <Icon size={16} name={state?.playing ? 'pause' : 'play'} />
+            <Icon size={16} name={state?.playing ? "pause" : "play"} />
           </button>
 
           <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
@@ -124,7 +128,7 @@ function Player() {
         </button>
 
         <button
-          onClick={controls[state.muted ? 'unmute' : 'mute']}
+          onClick={controls[state.muted ? "unmute" : "mute"]}
           className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
         >
           <Icon size={16} name={volumeIcon} />
@@ -137,8 +141,8 @@ function Player() {
             max={1}
             value={state.muted ? 0 : state?.volume}
             onChange={(value) => {
-              controls.volume(value)
-              controls.unmute()
+              controls.volume(value);
+              controls.unmute();
             }}
           />
         </div>
@@ -148,6 +152,6 @@ function Player() {
         </button>
       </div>
     </div>
-  )
+  );
 }
-export default Player
+export default Player;
