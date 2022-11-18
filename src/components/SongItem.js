@@ -10,7 +10,7 @@ function SongItem({ item }) {
   const { current, playing } = useSelector((state) => state.player);
 
   const imageStyle = (item) => {
-    switch (item.type) {(item.type) { //burda bir sorun var 
+    switch (item.type) {
       case "artist":
         return "rounded-full";
       case "podcast":
@@ -18,10 +18,10 @@ function SongItem({ item }) {
       default:
         return "rounded";
     }
-  }};
+  };
 
-  const isCurrentItem = (current?.id === item.id && playing)
-  
+  const isCurrentItem = current?.id === item.id && playing;
+
   const updateCurrent = () => {
     dispatch(setCurrent(item));
   };
@@ -42,10 +42,12 @@ function SongItem({ item }) {
 
         <button
           onClick={updateCurrent}
-          className={`w-10 h-10 rounded-full bg-primary absolute group-hover:flex group-focus:flex bottom-2 right-2 items-center justify-center ${!playing ? "hidden" : ""}`}
+          className={`w-10 h-10 rounded-full bg-primary absolute group-hover:flex group-focus:flex bottom-2 right-2 items-center justify-center ${
+            !isCurrentItem ? "" : "hidden"
+          }`}
         >
           <Icon
-            name={(isCurrentItem ?.id === item.id && playing) ? "pause" : "play"}
+            name={isCurrentItem?.id === item.id && playing ? "pause" : "play"}
             size={16}
           />
         </button>
