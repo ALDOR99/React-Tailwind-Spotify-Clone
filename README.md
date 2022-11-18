@@ -9,7 +9,7 @@ Check out my Spotify Cloning tutorial
 
 ### I continue to improve myself by cloning the spotify application that I spend a lot of time with. 👋
 
-<font color="pink">Coffee ☕ is how I keep up with `< code />` </font>
+<font color="pink">☕ is how I keep up with `< code />` </font>
 ### **` I'm on my way to become a JavaScript,PYTHON,JAVA advanced developer `**
 
 ### Tech I use
