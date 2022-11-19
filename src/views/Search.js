@@ -1,4 +1,4 @@
 function Search() {
-  return <div>Burasi arama sayfası</div>;
+  return <div>Burasi arama sayfasi</div>;
 }
 export default Search;
