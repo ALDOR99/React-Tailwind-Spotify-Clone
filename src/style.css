@@ -762,6 +762,18 @@ html,
   width: 12rem;
 }
 
+.w-\[22\.75rem\] {
+  width: 22.75rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-11 {
+  width: 2.75rem;
+}
+
 .min-w-\[11\.25rem\] {
   min-width: 11.25rem;
 }
@@ -804,6 +816,10 @@ html,
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -822,6 +838,10 @@ html,
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-x-6 {
@@ -1025,6 +1045,14 @@ html,
   padding-right: 0.5rem;
 }
 
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1069,6 +1097,10 @@ html,
   letter-spacing: 0.05em;
 }
 
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1084,8 +1116,59 @@ html,
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-pink-200 {
+  --tw-text-opacity: 1;
+  color: rgb(251 207 232 / var(--tw-text-opacity));
+}
+
+.text-black\/40 {
+  color: rgb(0 0 0 / 0.4);
+}
+
+.text-black\/30 {
+  color: rgb(0 0 0 / 0.3);
+}
+
+.text-black\/50 {
+  color: rgb(0 0 0 / 0.5);
+}
+
+.text-black\/60 {
+  color: rgb(0 0 0 / 0.6);
+}
+
+.text-black\/70 {
+  color: rgb(0 0 0 / 0.7);
+}
+
 .text-opacity-70 {
   --tw-text-opacity: 0.7;
+}
+
+.placeholder-black::-webkit-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-black::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-black\/60::-webkit-input-placeholder {
+  color: rgb(0 0 0 / 0.6);
+}
+
+.placeholder-black\/60::placeholder {
+  color: rgb(0 0 0 / 0.6);
+}
+
+.placeholder-black\/50::-webkit-input-placeholder {
+  color: rgb(0 0 0 / 0.5);
+}
+
+.placeholder-black\/50::placeholder {
+  color: rgb(0 0 0 / 0.5);
 }
 
 .opacity-0 {
@@ -1094,6 +1177,11 @@ html,
 
 .opacity-70 {
   opacity: 0.7;
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .line-clamp-2 {
@@ -1108,6 +1196,21 @@ html,
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+}
+
+.before\:block::before {
+  content: var(--tw-content);
+  display: block;
+}
+
+.before\:pt-\[100\]::before {
+  content: var(--tw-content);
+  padding-top: 100;
+}
+
+.before\:pt-\[100\%\]::before {
+  content: var(--tw-content);
+  padding-top: 100%;
 }
 
 .hover\:scale-\[1\.06\]:hover {
