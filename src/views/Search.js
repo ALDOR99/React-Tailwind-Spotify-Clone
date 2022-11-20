@@ -2,7 +2,10 @@ import categories from "data/categories";
 import favoriteCategories from "data/favorite-categories";
 import Title from "Title";
 import ScrollContainer from "react-indiana-drag-scroll";
-
+import { useRef } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { Icon } from "Icons";
 //----------------------------------------------------------------
 
 function Category({ category }) {
@@ -47,11 +50,60 @@ function WideCategory({ category }) {
 //----------------------------------------------------------------
 
 function Search() {
+  const favoritesRef = useRef();
+  const [prev, setPrev] = useState(false);
+  const [next, setNext] = useState(false);
+
+  useEffect(() => {
+    if (favoritesRef.current) {
+      const scrollHandle = () => {
+        const isEnd =
+          favoritesRef.current.scrollLeft + favoritesRef.current.offsetWidth ===
+          favoritesRef.current.scrollWidth;
+
+        const isBegin = favoritesRef.current.scrollLeft === 0;
+
+        setPrev(!isBegin);
+        setNext(!isEnd);
+      };
+
+      scrollHandle();
+
+      favoritesRef?.current?.addEventListener("scroll", scrollHandle);
+
+      return () => {
+        favoritesRef.current.removeEventListener("scroll", scrollHandle);
+      };
+    }
+  }, [favoritesRef]);
+
+  const slideFavoritesNext = () => {
+    favoritesRef.current.scrollLeft += favoritesRef.current.offsetWidth - 200;
+  };
+  const slideFavoritesPrev = () => {
+    favoritesRef.current.scrollLeft -= favoritesRef.current.offsetWidth - 200;
+  };
+
   return (
     <>
       <section className="mb-4">
         <Title title="En çok dinlediğin türler" />
-        <ScrollContainer className="flex overflow-x gap-x-6">
+
+        {prev && (
+          <button onClick={slideFavoritesPrev}>
+            <Icon size={24} name="prev" />
+          </button>
+        )}
+        {next && (
+          <button onClick={slideFavoritesNext}>
+            <Icon size={24} name="next" />
+          </button>
+        )}
+
+        <ScrollContainer
+          innerRef={favoritesRef}
+          className="flex scrollable overflow-x gap-x-6"
+        >
           {favoriteCategories.map((category, index) => (
             <WideCategory key={index} category={category} />
           ))}
