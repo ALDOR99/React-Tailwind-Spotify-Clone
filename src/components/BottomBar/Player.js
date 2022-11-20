@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setControls, setPlaying, setSidebar } from "stores/player";
 import { useRef } from "react";
+import FullScreenPlayer from "components/FullScreanPlayer";
 
 //------------------------------------------------------------------------------
 
@@ -159,13 +160,16 @@ function Player() {
         </div>
 
         <button
-          onClick={() => toggle()}
+          onClick={toggle}
           className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
         >
           <Icon size={16} name="fullSreen" />
         </button>
       </div>
-      <div ref={fsRef}>bu alanım full screen olacak</div>
+
+      <div ref={fsRef}>
+        {isFullscreen && <FullScreenPlayer toggle={toggle} />}
+      </div>
     </div>
   );
 }
