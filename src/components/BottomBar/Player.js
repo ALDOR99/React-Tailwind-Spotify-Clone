@@ -1,13 +1,24 @@
 import { Icon } from "Icons";
-import { useAudio } from "react-use";
+import { useAudio, useFullscreen, useToggle } from "react-use";
 import { SecondsToTime } from "utlies";
 import CustomRange from "components/CustomRange";
 import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setControls, setPlaying, setSidebar } from "stores/player";
+import { useRef } from "react";
+
+//------------------------------------------------------------------------------
 
 function Player() {
+  const fsRef = useRef();
+
+  const [show, toggle] = useToggle(false);
+
+  const isFullscreen = useFullscreen(fsRef, show, {
+    onClose: () => toggle(false),
+  });
+
   const dispatch = useDispatch();
   const { current, sidebar } = useSelector((state) => state.player);
 
@@ -147,10 +158,14 @@ function Player() {
           />
         </div>
 
-        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+        <button
+          onClick={() => toggle()}
+          className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
+        >
           <Icon size={16} name="fullSreen" />
         </button>
       </div>
+      <div ref={fsRef}>bu alanım full screen olacak</div>
     </div>
   );
 }
