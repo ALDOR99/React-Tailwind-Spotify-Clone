@@ -1,5 +1,5 @@
 import { Icon } from "Icons";
-
+import Title from "Title";
 //------------------------------------------------------------------------------------
 
 function Search() {
