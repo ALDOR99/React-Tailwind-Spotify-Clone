@@ -6,47 +6,9 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Icon } from "Icons";
-//----------------------------------------------------------------
+import Category from "components/CategoryItem";
+import WideCategory from "components/WideCategory";
 
-function Category({ category }) {
-  return (
-    <div
-      style={{ background: category.color }}
-      className="rounded-md before:pt-[100%] before:block relative"
-    >
-      <div className="absolute inset-0 overflow-hidden">
-        <h3 className="p-4 text-2xl tracking-tighter font-semibold">
-          {category.title}
-        </h3>
-        <img
-          src={category.cover}
-          className="shadow-spotify w-[6.25rem] h-[6.25rem] rotate-[25deg] translate-x-[18%] translate-y-[2%] absolute bottom-0 right-0"
-        />
-      </div>
-    </div>
-  );
-}
-
-//----------------------------------------------------------------
-
-function WideCategory({ category }) {
-  return (
-    <div
-      style={{ background: category.color }}
-      className="rounded-lg flex-shrink-0 relative w-[27.375rem] h-[13.75rem]"
-    >
-      <div className="absolute inset-0 overflow-hidden">
-        <h3 className="p-4 text-[2.5rem] tracking-tighter font-semibold">
-          {category.title}
-        </h3>
-        <img
-          src={category.cover}
-          className="shadow-spotify w-32 h-32 rotate-[25deg] translate-x-[18%] translate-y-[2%] absolute bottom-0 right-0"
-        />
-      </div>
-    </div>
-  );
-}
 //----------------------------------------------------------------
 
 function Search() {
@@ -78,36 +40,44 @@ function Search() {
   }, [favoritesRef]);
 
   const slideFavoritesNext = () => {
-    favoritesRef.current.scrollLeft += favoritesRef.current.offsetWidth - 200;
+    favoritesRef.current.scrollLeft += favoritesRef.current.offsetWidth - 300;
   };
   const slideFavoritesPrev = () => {
-    favoritesRef.current.scrollLeft -= favoritesRef.current.offsetWidth - 200;
+    favoritesRef.current.scrollLeft -= favoritesRef.current.offsetWidth - 300;
   };
 
   return (
     <>
-      <section className="mb-4">
+      <section className="mb-8">
         <Title title="En çok dinlediğin türler" />
 
-        {prev && (
-          <button onClick={slideFavoritesPrev}>
-            <Icon size={24} name="prev" />
-          </button>
-        )}
-        {next && (
-          <button onClick={slideFavoritesNext}>
-            <Icon size={24} name="next" />
-          </button>
-        )}
+        <div className="relative">
+          {prev && (
+            <button
+              className="w-12 h-12 absolute -left-6 z-10 top-1/2 -translate-y-1/2 hover:scale-[1.06] rounded-full bg-white text-black flex items-center justify-center"
+              onClick={slideFavoritesPrev}
+            >
+              <Icon size={24} name="prev" />
+            </button>
+          )}
+          {next && (
+            <button
+              className="w-12 h-12 absolute -right-6 z-10 top-1/2 -translate-y-1/2 hover:scale-[1.06]  rounded-full bg-white text-black flex items-center justify-center"
+              onClick={slideFavoritesNext}
+            >
+              <Icon size={24} name="next" />
+            </button>
+          )}
 
-        <ScrollContainer
-          innerRef={favoritesRef}
-          className="flex scrollable overflow-x gap-x-6"
-        >
-          {favoriteCategories.map((category, index) => (
-            <WideCategory key={index} category={category} />
-          ))}
-        </ScrollContainer>
+          <ScrollContainer
+            innerRef={favoritesRef}
+            className="flex scrollable overflow-x gap-x-6"
+          >
+            {favoriteCategories.map((category, index) => (
+              <WideCategory key={index} category={category} />
+            ))}
+          </ScrollContainer>
+        </div>
       </section>
 
       <section>
