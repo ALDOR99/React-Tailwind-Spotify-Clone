@@ -2,7 +2,8 @@ export default [
   {
     id: 1,
     title: "Pop",
-    cover: "https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe",
+    cover:
+      "https://concerts.spotifycdn.com/images/live-events_category-image.jpg",
     color: "#8c67ab",
   },
 

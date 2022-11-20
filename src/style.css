@@ -726,6 +726,18 @@ html,
   height: 2rem;
 }
 
+.h-\[13\.75\] {
+  height: 13.75;
+}
+
+.h-\[13\.75rem\] {
+  height: 13.75rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -780,6 +792,18 @@ html,
 
 .w-\[22\.75rem\] {
   width: 22.75rem;
+}
+
+.w-\[27\.375\] {
+  width: 27.375;
+}
+
+.w-\[27\.375rem\] {
+  width: 27.375rem;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .min-w-\[11\.25rem\] {
@@ -931,6 +955,10 @@ html,
 
 .rounded-3xl {
   border-radius: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-t {
@@ -1097,6 +1125,10 @@ html,
 
 .text-s {
   font-size: 0.813rem;
+}
+
+.text-\[2\.5rem\] {
+  font-size: 2.5rem;
 }
 
 .font-semibold {
