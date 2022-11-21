@@ -1,7 +1,11 @@
+import { useSelector } from "react-redux";
+
 function FullScreenPlayer({ toogle }) {
+  const { current } = useSelector((state) => state.player);
+
   return (
-    <div>
-      Full Screen oldu
+    <div className="bg-">
+      {current.title}
       <button onClick={toogle}> Kapat</button>
     </div>
   );
