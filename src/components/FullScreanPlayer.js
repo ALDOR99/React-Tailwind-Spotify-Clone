@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { Icon } from "Icons";
 import { SecondsToTime } from "utlies";
 import CustomRange from "./CustomRange";
+
 //------------------------------------------------------------------------------
 
 function FullScreenPlayer({ toogle, state, controls, volumeIcon }) {
@@ -91,4 +92,8 @@ function FullScreenPlayer({ toogle, state, controls, volumeIcon }) {
   );
 }
 
+//---------------------------------------------------------------------
+
 export default FullScreenPlayer;
+
+//---------------------------------------------------------------------
