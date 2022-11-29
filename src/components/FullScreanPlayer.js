@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux";
-import { Icon } from "Icons";
 import { SecondsToTime } from "utlies";
 import CustomRange from "./CustomRange";
-
+import { Icon } from "Icons";
 //------------------------------------------------------------------------------
 
 function FullScreenPlayer({ toogle, state, controls, volumeIcon }) {
@@ -17,11 +16,20 @@ function FullScreenPlayer({ toogle, state, controls, volumeIcon }) {
         className="absolute inset-0 object-cover bg-center bg-cover blur-md opacity-30"
         style={{ backgroundImage: `url(${current.image})` }}
       ></div>
+
+      <div className="absolute opacity-70 top-14 left-8 gap-x-4 text-white flex items-center">
+        <Icon size={34} name="logo" />
+        <div className="text-md">
+          <p style={{ fontSize: 24 }}>PLAYING FROM PLAYLIST</p>
+          <h6 className="font-bold mt-0.5 ">{current.title}</h6>
+        </div>
+      </div>
+
       <div className="absolute left-8 bottom-36 flex items-center gap-x-5">
         <img src={current.image} className="w-24 h-24 object-cover" />
-        <div>
+        <div className="self-end">
           <h3 className="text-3xl font-semibold">{current.title}</h3>
-          <p className="text-base font-semibold opacity-50">
+          <p className="text-sm font-medium opacity-50">
             {current.description}
           </p>
         </div>
