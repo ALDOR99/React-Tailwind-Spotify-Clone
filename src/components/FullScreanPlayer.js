@@ -9,20 +9,28 @@ function FullScreenPlayer({ toogle, state, controls, volumeIcon }) {
   const { current } = useSelector((state) => state.player);
 
   return (
-    <div className="h-full relative">
+    <div
+      className="h-full relative"
+      onClick={controls[state?.playing ? "pause" : "play"]}
+    >
       <div
         className="absolute inset-0 object-cover bg-center bg-cover blur-md opacity-30"
         style={{ backgroundImage: `url(${current.image})` }}
       ></div>
-      <div className="absolute left-8 bottom-36 flex items-center gap-x-4">
+      <div className="absolute left-8 bottom-36 flex items-center gap-x-5">
         <img src={current.image} className="w-24 h-24 object-cover" />
         <div>
-          <h3>{current.title}</h3>
-          <p>{current.description}</p>
+          <h3 className="text-3xl font-semibold">{current.title}</h3>
+          <p className="text-base font-semibold opacity-50">
+            {current.description}
+          </p>
         </div>
       </div>
 
-      <div className="w-full absolute bottom-4 flex flex-col px-8 items-center">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="w-full absolute bottom-4 flex flex-col px-8 items-center"
+      >
         <div className="w-full flex items-center mb-1.5 gap-x-2">
           <div className="text-[0.688rem] text-white text-opacity-70">
             {SecondsToTime(state?.time)}
