@@ -14,6 +14,13 @@ function FullScreenPlayer({ toogle, state, controls, volumeIcon }) {
         className="absolute inset-0 object-cover bg-center bg-cover blur-md opacity-30"
         style={{ backgroundImage: `url(${current.image})` }}
       ></div>
+      <div className="absolute left-8 bottom-36 flex items-center gap-x-4">
+        <img src={current.image} className="w-24 h-24 object-cover" />
+        <div>
+          <h3>{current.title}</h3>
+          <p>{current.description}</p>
+        </div>
+      </div>
 
       <div className="w-full absolute bottom-4 flex flex-col px-8 items-center">
         <div className="w-full flex items-center mb-1.5 gap-x-2">

@@ -649,6 +649,30 @@ html,
   left: 0px;
 }
 
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.bottom-28 {
+  bottom: 7rem;
+}
+
+.bottom-32 {
+  bottom: 8rem;
+}
+
+.bottom-36 {
+  bottom: 9rem;
+}
+
+.left-6 {
+  left: 1.5rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -856,6 +880,10 @@ html,
 
 .w-\[22\.75rem\] {
   width: 22.75rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .min-w-\[11\.25rem\] {
